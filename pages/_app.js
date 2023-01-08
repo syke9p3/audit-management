@@ -1,4 +1,4 @@
-import '../styles/globals.scss'
+import '../styles/globals.css'
 
 import firebase from 'firebase/app'
 import 'firebase/firestore';

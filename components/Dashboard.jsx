@@ -6,8 +6,8 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 
 const Dashboard = () => {
 
-	const [user, loading] = useAuthState(auth)
-	if (loading) return <h1>Loading...</h1>
+	// const [user, loading] = useAuthState(auth)
+	// if (loading) return <h1>Loading...</h1>
 
 	return (
 		<div className='container px-16'> 

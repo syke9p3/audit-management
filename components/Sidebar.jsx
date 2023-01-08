@@ -13,6 +13,8 @@ import { BsFillPersonFill } from 'react-icons/bs'
 
 const Sidebar = () => {
 
+	// const [user] = useAuthState(auth);
+
 	const sidebarItems =
 		[
 			{ name: 'Dashboard', icon: <RiLayoutGridFill />, active: true},
@@ -21,7 +23,6 @@ const Sidebar = () => {
 			{ name: 'Reports', icon: <HiDocumentReport /> },
 
 		]
-	const [user] = useAuthState(auth);
 
 	return (
 
@@ -43,7 +44,7 @@ const Sidebar = () => {
 
 						{/* <div className='mx-2 mt-10'>
 							<div className='px-2'>
-								<input  className='text-sm text-gray-700 w-full px-6 py-2 rounded-md'/>
+								<input className='text-sm text-gray-700 w-full px-6 py-2 rounded-md'/>
 							</div>
 						</div> */}
 
@@ -65,7 +66,7 @@ const Sidebar = () => {
 
 						</ul>
 					</div>
-					<div class="py-2 mb-2 flex items-center justify-between px-4 w-full space-x-2">
+					{/* <div class="py-2 mb-2 flex items-center justify-between px-4 w-full space-x-2">
 						<div className='flex space-x-2 items-center max-w-[20rem]'>
 							<img
 								src={user.photoURL}
@@ -80,7 +81,7 @@ const Sidebar = () => {
 						</div>
 						<button onClick={() => auth.signOut()} className="hidden md:block text-white font-boldtext-2xl"><FiLogOut /></button>
 
-					</div>
+					</div> */}
 				</div>
 			</nav>
 		</div>

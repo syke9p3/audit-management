@@ -13,7 +13,7 @@ const Login = () => {
 
 	useTitle('Sign in');
 
-	const auth = getAuth();
+	// const auth = getAuth();
 
 	const [error, setError] = useState('');
 
@@ -82,7 +82,7 @@ const Login = () => {
 						error=""
 						className='flex flex-col space-y-1'
 					>
-						<input required id="email" name="email" placeholder="Your email" className="`${error} ? '1px solid red' : '1px solid #ccc'` osutline outlinse-2 rounded-md focus:outline-0 focus:ring-1 ring-blue-500 oustline-red-400 py-2 px-3 text-sms" />
+						<input required id="email" name="email" placeholder="Your email" className="`${error} ? '1px solid red' : '1px solid #ccc'` osutline outlinse-2 rounded-md focus:outline-0 focus:ring-1 ring-blue-500 oustline-red-400 py-2 px-3 text-sm" />
 					</Input.Wrapper>
 					<Input.Wrapper
 						id="input-demo"
@@ -91,14 +91,14 @@ const Login = () => {
 						error=""
 						className='flex flex-col space-y-1'
 					>
-						<input required id="password" name="password" placeholder="Your password" className="`${error} ? '1px solid red' : '1px solid #ccc'` osutline outlinse-2 rounded-md focus:outline-0 focus:ring-1 ring-blue-500 oustline-red-400 py-2 px-3 text-sms" />
+						<input required id="password" name="password" placeholder="Your password" className="`${error} ? '1px solid red' : '1px solid #ccc'` osutline outlinse-2 rounded-md focus:outline-0 focus:ring-1 ring-blue-500 oustline-red-400 py-2 px-3 text-sm" />
 					</Input.Wrapper>
 				</div>
 				<button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-3 rounded-sm mb-3">Sign In</button>
-				<div className='flex flex-col gap-2 text-center'>
+				{/* <div className='flex flex-col gap-2 text-center'>
 					<p>or</p>
-					<button  className="w-full bg-white text-gray-800 hover:bg-gray-50 text-sm font-semibold p-3 rounded-sm flex items-center gap-2 justify-center"><FcGoogle className='text-2xl' />Sign in with Google</button>
-				</div>
+					<button onClick={googleProvider}  className="w-full bg-white text-gray-800 hover:bg-gray-50 text-sm font-semibold p-3 rounded-sm flex items-center gap-2 justify-center"><FcGoogle className='text-2xl' />Sign in with Google</button>
+				</div> */}
 			</form>
 		</div>
 	);
