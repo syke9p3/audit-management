@@ -14,18 +14,18 @@ export default function Home() {
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
 	const [user, setUser] = useState(null);
 
-	// useEffect(() => {
-	// 	const unsubscribe = auth.onAuthStateChanged((user) => {
-	// 		if (user) {
-	// 			setIsAuthenticated(true);
-	// 			setUser(user);
-	// 		} else {
-	// 			setIsAuthenticated(false);
-	// 			setUser(null);
-	// 		}
-	// 	});
-	// 	return unsubscribe;
-	// }, []);
+	useEffect(() => {
+		const unsubscribe = auth.onAuthStateChanged((user) => {
+			if (user) {
+				setIsAuthenticated(true);
+				setUser(user);
+			} else {
+				setIsAuthenticated(false);
+				setUser(null);
+			}
+		});
+		return unsubscribe;
+	}, []);
 
 	return (
 		<>

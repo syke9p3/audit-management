@@ -13,7 +13,7 @@ import { BsFillPersonFill } from 'react-icons/bs'
 
 const Sidebar = () => {
 
-	// const [user] = useAuthState(auth);
+	const [user] = useAuthState(auth);
 
 	const sidebarItems =
 		[
@@ -66,7 +66,7 @@ const Sidebar = () => {
 
 						</ul>
 					</div>
-					{/* <div class="py-2 mb-2 flex items-center justify-between px-4 w-full space-x-2">
+					<div class="py-2 mb-2 flex items-center justify-between px-4 w-full space-x-2">
 						<div className='flex space-x-2 items-center max-w-[20rem]'>
 							<img
 								src={user.photoURL}
@@ -81,7 +81,7 @@ const Sidebar = () => {
 						</div>
 						<button onClick={() => auth.signOut()} className="hidden md:block text-white font-boldtext-2xl"><FiLogOut /></button>
 
-					</div> */}
+					</div>
 				</div>
 			</nav>
 		</div>

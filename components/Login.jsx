@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Input } from '@mantine/core';
 import { FcGoogle } from 'react-icons/fc'
 
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
@@ -13,7 +12,7 @@ const Login = () => {
 
 	useTitle('Sign in');
 
-	// const auth = getAuth();
+	const auth = getAuth();
 
 	const [error, setError] = useState('');
 
@@ -49,11 +48,9 @@ const Login = () => {
 				setError("Wrong password");
 				console.log(error)
 				console.log("Wrong Pass")
-				// setError(error);
 				
 			  } else if (error.code === 'auth/user-not-found') {
 				setError('User not found');
-				// setError(error);
 
 			  } else {
 				setError(error.message);
@@ -75,24 +72,14 @@ const Login = () => {
 				{error && <p className="error-message text-xs italic text-red-600 p-3 bg-red-50 my-4">{error}</p>}
            
 				<div className='mb-4 space-y-3 min-w-md'>
-					<Input.Wrapper
-						id="input-email"
-						withAsterisk
-						label="Email"
-						error=""
-						className='flex flex-col space-y-1'
-					>
+					<div className='flex flex-col space-y-1'>
+						<label className='text-sm font-semibold text-gray-700'>Email</label>
 						<input required id="email" name="email" placeholder="Your email" className="`${error} ? '1px solid red' : '1px solid #ccc'` osutline outlinse-2 rounded-md focus:outline-0 focus:ring-1 ring-blue-500 oustline-red-400 py-2 px-3 text-sm" />
-					</Input.Wrapper>
-					<Input.Wrapper
-						id="input-demo"
-						withAsterisk
-						label="Password"
-						error=""
-						className='flex flex-col space-y-1'
-					>
+					</div>
+					<div className='flex flex-col space-y-1'>
+						<label className='text-sm font-semibold text-gray-700'>Password</label>
 						<input required id="password" name="password" placeholder="Your password" className="`${error} ? '1px solid red' : '1px solid #ccc'` osutline outlinse-2 rounded-md focus:outline-0 focus:ring-1 ring-blue-500 oustline-red-400 py-2 px-3 text-sm" />
-					</Input.Wrapper>
+					</div>
 				</div>
 				<button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-3 rounded-sm mb-3">Sign In</button>
 				{/* <div className='flex flex-col gap-2 text-center'>

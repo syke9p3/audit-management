@@ -5,8 +5,7 @@ import { auth } from '../utils/firebase'
 
 const Layout = ({ children }) => {
 
-	// const [user, loading] = useAuthState(auth);
-	const [user] = useState("");
+	const [user, loading] = useAuthState(auth);
 
 	return (
 			<div class="flex">
